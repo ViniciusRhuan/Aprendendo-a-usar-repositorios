@@ -17,9 +17,9 @@ int main() {
         "orw %%dx, %%ax;"      // Combina 'b' nos 16 bits inferiores de EAX
         "movl %%eax, %0;"      // Armazena o resultado final em 'c'
 
-        "=m" (c)             // Saída (variável 'c')
-        "=m" (a), "m" (b)     // Entradas (variáveis 'a' e 'b')
-        "%ax", "%dx"         // Registradores modificados
+        : "=m" (c)             // Saída (variável 'c')
+        : "m" (a), "m" (b)     // Entradas (variáveis 'a' e 'b')
+        : "%ax", "%dx"         // Registradores modificados
     );
 
     printf("Resultado final: %d (0x%X)\n", c, c);
