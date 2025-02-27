@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 // Declaração e definição das variáveis globais
 int a = 2, b = 3, c = 5, x = 4, y;
